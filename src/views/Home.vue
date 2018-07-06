@@ -27,6 +27,7 @@ export default {
 
   .img1 {
     background: url('../assets/home.jpg');
+    background-size: cover;
   }
 
 </style>
