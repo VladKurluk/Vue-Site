@@ -1,6 +1,6 @@
 <template>
   <div class="home main-content">
-    <div class="lef-content">
+    <div class="lef-content slideUp">
       <h1>Crypto Logo</h1>
 
       <p class="subtxt">Adipisicing labore dolore proident non nostrud sint cupidatat labore.</p>
@@ -22,11 +22,24 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
-  .img1 {
-    background: url('../assets/home.jpg');
-    background-size: cover;
+  $page_color: #625B7E;
+
+  .lef-content {
+
+    h1 {
+      text-transform: uppercase;
+      color: $page_color;
+    }
+  }
+
+  .img2 {
+    background: $page_color;
+
+    img {
+      width: 50%;
+    }
   }
 
 </style>
