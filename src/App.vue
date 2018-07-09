@@ -14,19 +14,16 @@
         <transition name="fade" mode="out-in">
           <router-view />
         </transition>
+
       </div>
     </div>
+    
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
+  name: 'app'
 }
 </script>
 

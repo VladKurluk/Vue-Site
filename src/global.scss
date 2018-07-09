@@ -105,7 +105,7 @@ p {
         justify-items: center;
         align-items: center;
 
-        button {
+        .button-link {
             background: none;
             padding: 15px 20px;
             font-size: 1.7em;
@@ -114,6 +114,7 @@ p {
             color: $primary;
             text-transform: uppercase;
             font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
         }
     }
 }
