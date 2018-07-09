@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import Home from './views/Home'
 import About from './views/About'
 import One from './views/PortfolioOne'
+import Two from './views/PortfolioTwo'
+import Three from './views/PortfolioThree'
 
 Vue.use(VueRouter)
 
@@ -22,6 +24,16 @@ export default new VueRouter ({
             path: '/portfolio/one',
             name: 'one',
             component: One
+        },
+        {
+            path: '/portfolio/two',
+            name: 'two',
+            component: Two
+        },
+        {
+            path: '/portfolio/three',
+            name: 'three',
+            component: Three
         }
     ],
     mode: 'history'
