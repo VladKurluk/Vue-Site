@@ -1,6 +1,6 @@
-# vue_site
+# Vue Site
 
-> website created with vue.js
+> Website created with framework vue.js
 
 ## Build Setup
 
@@ -15,4 +15,4 @@ npm run dev
 npm run build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+You can view this site [here](http://vueapp.vladkurluk.dp.ua/).
