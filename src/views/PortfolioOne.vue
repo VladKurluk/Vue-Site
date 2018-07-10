@@ -1,6 +1,6 @@
 <template>
   <div class="home main-content">
-    <div class="lef-content slideUp">
+    <div class="left-content slideUp">
       <h1>Crypto Logo</h1>
 
       <p class="subtxt">Adipisicing labore dolore proident non nostrud sint cupidatat labore.</p>
@@ -26,7 +26,7 @@ export default {
 
   $page_color: #625B7E;
 
-  .lef-content {
+  .left-content {
 
     h1 {
       text-transform: uppercase;

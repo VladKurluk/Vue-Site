@@ -1,6 +1,6 @@
 <template>
   <div class="two main-content">
-    <div class="lef-content slideUp">
+    <div class="left-content slideUp">
 
       <router-link to="/portfolio/one"><img src="../assets/arrow-up.svg" class="arrow arrow-up" alt="Arrow up Link"></router-link>
 
@@ -29,7 +29,7 @@ export default {
 
   $page_color: #48b886;
 
-  .lef-content {
+  .left-content {
 
     h1 {
       text-transform: uppercase;
