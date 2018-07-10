@@ -1,5 +1,7 @@
 var path = require('path')
 var webpack = require('webpack')
+var PrerenderSpaPlugin = require('prerender-spa-plugin')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: './src/main.js',
@@ -103,6 +105,34 @@ if (process.env.NODE_ENV === 'production') {
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
-    })
+    }),
+    // Paste the following as another plugin. Other code removed for brevity
+
+    new HtmlWebpackPlugin({
+      template: 'index.html',
+      filename: path.resolve(__dirname, 'dist/index.html')
+    }),
+
+    new PrerenderSpaPlugin(
+      // Absolute path to compiled SPA
+      path.resolve(__dirname, 'dist/'),
+      // List of routes to prerender
+      [ '/', '/about', '/portfolio/one', '/portfolio/two', '/portfolio/three' ],
+      {
+        postProcessHtml: function (context) {
+          var titles = {
+            '/': 'My home page',
+            '/about': 'My awesome about page',
+            '/portfolio/one': 'First portfolio page',
+            '/portfolio/two': 'Second portfolio page',
+            '/portfolio/three': 'Third portfolio page'
+          }
+          return context.html.replace(
+            /<title>[^<]*<\/title>/i,
+            '<title>' + titles[context.route] + '</title>'
+          )
+        }
+      }
+    )
   ])
 }
