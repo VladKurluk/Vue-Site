@@ -39,6 +39,7 @@ export default {
 
   .subtxt {
     font-size: 1.5em;
+    line-height: 30px;
     margin-top: 30px;
     margin-bottom: 100px;
   }
